@@ -1,0 +1,28 @@
+User.create(name: "darin", email: "darin@email.com", password: "password", password_confirmation: "password")
+User.create(name: "lance", email: "lance@email.com", password: "password", password_confirmation: "password")
+User.create(name: "shawn", email: "shawn@email.com", password: "password", password_confirmation: "password")
+
+Course.create(name: "Mexico - Everyday Expressions", country_id: 1)
+Course.create(name: "Mexico - Words For People", country_id: 1)
+Course.create(name: "Mexico - Words Describing People", country_id: 1)
+
+CourseUser.create(user_id: 1, course_id: 1)
+CourseUser.create(user_id: 1, course_id: 2)
+CourseUser.create(user_id: 2, course_id: 1)
+CourseUser.create(user_id: 2, course_id: 2)
+CourseUser.create(user_id: 3, course_id: 1)
+CourseUser.create(user_id: 3, course_id: 2)
+
+Country.create(name: "Mexico")
+Country.create(name: "Colombia")
+Country.create(name: "Chile")
+
+Expression.create(spanish: "Que onda?", english: "What's up?", course_id: 1)
+Expression.create(spanish: "Que milagro!", english: "Long time no see", course_id: 1)
+Expression.create(spanish: "Mande?", english: "What?", course_id: 1)
+Expression.create(spanish: "Güey", english: "Dude", course_id: 2)
+Expression.create(spanish: "Chavo", english: "kid", course_id: 2)
+Expression.create(spanish: "Ruco", english: "Old guy", course_id: 2)
+Expression.create(spanish: "Güera", english: "Gringo", course_id: 3)
+Expression.create(spanish: "Codo", english: "Stingy", course_id: 3)
+Expression.create(spanish: "Buena", english: "Hot", course_id: 3)
