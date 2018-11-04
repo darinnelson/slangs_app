@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
     post "/sessions" => "sessions#create"
   end
+  
+  get "/users/new" => "users#new"
+  post "/users" => "users#create"
 end
