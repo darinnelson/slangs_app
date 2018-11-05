@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get "/sessions/new" => "sessions#new"
     post "/sessions" => "sessions#create"
   end
+
+  get "courses" => "courses#index"
   
   get "/users" => "users#index"
   get "/users/new" => "users#new"
@@ -14,4 +16,6 @@ Rails.application.routes.draw do
 
   get "/sessions/new" => "sessions#new"
   post "/sessions" => "sessions#create"
+
+  get "/expressions" => "expressions#index"
 end
