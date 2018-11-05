@@ -1,4 +1,8 @@
-class Api::SessionsController < ApplicationController
+class SessionsController < ApplicationController
+
+  def new
+    render "new.html.erb"
+  end
 
   def create
     user = User.find_by(email: params[:email])
@@ -11,9 +15,11 @@ class Api::SessionsController < ApplicationController
         Rails.application.credentials.fetch(:secret_key_base), # the secret key
         'HS256' # the encryption algorithm
       )
-      render json: {jwt: jwt, email: user.email, user_id: user.id}, status: :created
+      redirect_to "https://www.duolingo.com"
+      # render json: {jwt: jwt, email: user.email, user_id: user.id}, status: :createds
     else
-      render json: {}, status: :unauthorized
+      @something = 1
+      redirect_to "/sessions/new"
     end
   end
 end
