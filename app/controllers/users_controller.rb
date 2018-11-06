@@ -22,7 +22,6 @@ class UsersController < ApplicationController
       password_confirmation: params["password_confirmation"]
     )
     @user.save
-    render "show.json.jbuilder"
   end
 
 end

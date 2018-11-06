@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         Rails.application.credentials.fetch(:secret_key_base), # the secret key
         'HS256' # the encryption algorithm
       )
-      redirect_to "/courses"
+      redirect_to "/countries"
       # render json: {jwt: jwt, email: user.email, user_id: user.id}, status: :createds
     else
       @something = 1

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     get "/sessions/new" => "sessions#new"
     post "/sessions" => "sessions#create"
   end
+  
+  get "countries" => "countries#index"
+  get "countries/:id" => "countries#show"
 
   get "courses" => "courses#index"
   get "courses/:id" => "courses#show"

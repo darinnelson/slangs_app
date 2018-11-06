@@ -1,9 +1,13 @@
 <h2>Translate the following.</h2>
 <% @expressions.each do |expression| %>
-  <h2><%= expression.spanish %></h2>
+  <h2><%= expression.spanish + " - " + expression.english %></h2>
   <form action="expressions" method="get">
     <div> 
       Enter the translation: <input type="text" name="">
     </div>
   </form>
 <% end %>
+
+</br>
+</br>
+<a href="/expressions">All expressions</a>
