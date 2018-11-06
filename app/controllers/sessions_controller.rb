@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       # render json: {jwt: jwt, email: user.email, user_id: user.id}, status: :createds
     else
       @something = 1
-      redirect_to "/sessions/new"
+      render "new.html.erb"
     end
   end
 end

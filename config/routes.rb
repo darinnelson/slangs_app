@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   get "courses" => "courses#index"
+  get "courses/:id" => "courses#show"
   
   get "/users" => "users#index"
   get "/users/new" => "users#new"
@@ -18,4 +19,5 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   get "/expressions" => "expressions#index"
+  get "/expressions/:id" => "expressions#show"
 end
